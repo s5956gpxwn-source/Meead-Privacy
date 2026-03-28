@@ -3,73 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>سياسة الخصوصية - Privacy</title>
+    <title>سياسة الخصوصية - Privacy Policy</title>
     <style>
-        :root { --bg: #f2f2f7; --card: #ffffff; --text: #000000; --sec: #666666; --line: #e5e5ea; --icon: #000000; }
-        @media (prefers-color-scheme: dark) { :root { --bg: #000000; --card: #1c1c1e; --text: #ffffff; --sec: #ebebf599; --line: #38383a; --icon: #ffffff; } }
-        body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; -webkit-font-smoothing: antialiased; line-height: 1.6; }
-        .container { background: var(--card); border-radius: 28px; padding: 35px 25px; max-width: 400px; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .section-title { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 20px; }
-        .content { font-size: 14px; color: var(--sec); margin-bottom: 25px; text-align: justify; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
-        .content h3 { font-size: 15px; color: var(--text); margin-top: 15px; margin-bottom: 5px; }
-        .eng { direction: ltr; text-align: left; }
-        .dev-info { text-align: center; margin-top: 30px; }
-        .avatar { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--text); margin-bottom: 10px; object-fit: cover; }
-        .dev-name { font-size: 17px; font-weight: 700; }
-        .x-icon { width: 45px; height: 45px; background: var(--icon); border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; color: var(--card); margin: 15px 0; text-decoration: none; }
+        :root { --bg: #f2f2f7; --card: #ffffff; --text: #000000; --sec: #666666; --line: #e5e5ea; --icon: #000000; --pill-bg: #e5e5ea; --pill-active: #007AFF; --pill-text: #333; --pill-active-text: #fff; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #000000; --card: #1c1c1e; --text: #ffffff; --sec: #ebebf599; --line: #38383a; --icon: #ffffff; --pill-bg: #38383a; --pill-active: #0A84FF; --pill-text: #ccc; --pill-active-text: #fff; } }
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, system-ui, 'SF Pro Text', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+        .container { background: var(--card); border-radius: 28px; padding: 35px 25px; max-width: 420px; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .lang-switcher { display: flex; justify-content: center; gap: 6px; margin-bottom: 25px; flex-wrap: wrap; }
+        .lang-btn { border: none; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; background: var(--pill-bg); color: var(--pill-text); transition: all 0.2s ease; }
+        .lang-btn.active { background: var(--pill-active); color: var(--pill-active-text); }
+        .section-title { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+        .updated { font-size: 12px; color: var(--sec); text-align: center; margin-bottom: 20px; }
+        .content { font-size: 15px; color: var(--sec); margin-bottom: 10px; text-align: justify; }
+        .content h3 { font-size: 16px; color: var(--text); margin-top: 20px; margin-bottom: 6px; font-weight: 700; }
+        .content b { color: var(--text); }
+        .content ul { padding-inline-start: 20px; margin: 8px 0; }
+        .content li { margin-bottom: 6px; }
+        .lang-block { display: none; }
+        .lang-block.active { display: block; }
+        [dir="ltr"] .content { text-align: left; }
+        .footer { text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--line); }
         .copyright { font-size: 11px; color: var(--sec); }
     </style>
 </head>
 <body>
 <div class="container">
-    
-    <div class="eng">
-        <div class="section-title">Privacy Policy</div>
+
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="setLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('fr')">Français</button>
+        <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
+        <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+    </div>
+
+    <!-- Arabic -->
+    <div class="lang-block" id="lang-ar">
+        <div class="section-title">سياسة الخصوصية</div>
+        <div class="updated">آخر تحديث: مارس 2026</div>
         <div class="content">
-            Last Updated: March 2026<br><br>
-            At "Meead", we put your privacy first. We do not collect, store, or share any of your personal data on our own servers.
-            <h3>1. Data Storage</h3>
-            All data you enter (tasks, schedules, notes) is stored locally on your device only. If the sync feature is enabled, Apple's iCloud service is used to transfer data between your devices in a fully encrypted manner; we cannot access this data.
-            <h3>2. Required Permissions</h3>
-            • <b>Notifications:</b> For tasks, work shifts, and fingerprint reminders.<br>
-            • <b>Calendar & Reminders:</b> To sync existing tasks or add new ones directly from the app.<br>
-            • <b>Photos:</b> "Add Photos Only" permission to save copies of your schedules to your gallery upon your request.
-            <h3>3. Third-Party Services</h3>
-            The app does not contain third-party analytics or advertising networks. It is completely free of tracking tools.
-            <h3>4. Contact</h3>
-            For privacy inquiries: <b>mohammad087087@gmail.com</b><br>
-            <b>Region:</b> Saudi Arabia
+            تطبيق ميعاد ("التطبيق") من تطوير محمد القرني ("المطور"، "نحن"). نحن نحترم خصوصيتك ونلتزم بحمايتها. توضح هذه السياسة كيفية تعاملنا مع بياناتك.
+
+            <h3>البيانات التي نجمعها</h3>
+            <b>لا نجمع أي بيانات شخصية.</b> لا نطلب منك إنشاء حساب أو تسجيل دخول أو تقديم أي معلومات تعريفية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف.
+
+            <h3>البيانات المخزنة على جهازك</h3>
+            جميع بياناتك تُخزن محلياً على جهازك فقط وتشمل:
+            <ul>
+                <li>المهام والملاحظات</li>
+                <li>جداول الدوام وأنواعه</li>
+                <li>سجلات الأوفر تايم والتأخير والاستئذان والغيابات</li>
+                <li>الإجازات وأنواعها</li>
+                <li>إعدادات التطبيق وتفضيلاتك</li>
+            </ul>
+            هذه البيانات لا تُرسل إلى أي خادم خارجي ولا يمكننا الوصول إليها.
+
+            <h3>مزامنة iCloud (اختيارية)</h3>
+            إذا فعّلت مزامنة iCloud (ميزة مميزة اختيارية)، تُنقل بياناتك عبر خدمة Apple iCloud Key-Value Storage لمزامنتها بين أجهزة Apple الخاصة بك فقط. هذه البيانات:
+            <ul>
+                <li>تخضع لسياسة خصوصية Apple</li>
+                <li>مشفرة أثناء النقل والتخزين بواسطة Apple</li>
+                <li>لا نصل إليها ولا نتحكم فيها</li>
+                <li>يمكنك تعطيلها في أي وقت من إعدادات التطبيق</li>
+            </ul>
+
+            <h3>الاشتراكات والمدفوعات</h3>
+            تتم جميع عمليات الشراء والاشتراك حصرياً عبر نظام Apple (StoreKit). نحن:
+            <ul>
+                <li>لا نجمع أو نخزن أي معلومات مالية أو بيانات بطاقات الدفع</li>
+                <li>لا نعالج المدفوعات مباشرة — Apple هي المسؤولة بالكامل</li>
+                <li>الاشتراكات تُجدد تلقائياً ما لم تُلغَ قبل نهاية الفترة الحالية</li>
+                <li>يمكنك إدارة اشتراكاتك وإلغائها من إعدادات حساب Apple الخاص بك</li>
+            </ul>
+
+            <h3>الإشعارات</h3>
+            يستخدم التطبيق إشعارات محلية فقط (تُجدول على جهازك) لتنبيهك بمواعيد الدوام والمهام. هذه الإشعارات:
+            <ul>
+                <li>لا تمر عبر أي خادم خارجي</li>
+                <li>تتطلب إذنك المسبق</li>
+                <li>يمكنك التحكم فيها أو تعطيلها من إعدادات التطبيق أو إعدادات الجهاز</li>
+            </ul>
+
+            <h3>خدمات الطرف الثالث</h3>
+            <b>لا نستخدم أي خدمات طرف ثالث.</b> لا يحتوي التطبيق على:
+            <ul>
+                <li>أدوات تحليلات أو تتبع</li>
+                <li>إعلانات</li>
+                <li>مكتبات خارجية لجمع البيانات</li>
+                <li>أدوات تقارير الأعطال التي ترسل بيانات لجهات خارجية</li>
+            </ul>
+
+            <h3>أمان البيانات</h3>
+            بياناتك محمية بآليات أمان نظام iOS بما في ذلك تشفير الجهاز وحماية التطبيقات في بيئة sandbox. لا نتحكم في أمان البيانات المخزنة على iCloud حيث تخضع لسياسات Apple الأمنية.
+
+            <h3>خصوصية الأطفال</h3>
+            التطبيق غير موجه للأطفال دون سن 13 عاماً ولا نجمع عمداً أي بيانات من الأطفال.
+
+            <h3>التغييرات على هذه السياسة</h3>
+            قد نحدّث هذه السياسة من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تحديث تاريخ "آخر تحديث". ننصح بمراجعة هذه السياسة دورياً.
+
+            <h3>التواصل</h3>
+            لأي استفسارات حول هذه السياسة، تواصل معنا عبر صفحة التطبيق في App Store أو عبر حساب المطور على X (تويتر).
         </div>
     </div>
 
-    <div class="section-title">سياسة الخصوصية</div>
-    <div class="content">
-        <b>سياسة الخصوصية (Privacy Policy)</b><br>
-        آخر تحديث: مارس 2026<br><br>
-        في "ميعاد"، نضع خصوصيتك في المقام الأول. نحن لا نقوم بجمع أو تخزين أو مشاركة أي من بياناتك الشخصية على خوادم خاصة بنا.
-        <h3>1. تخزين البيانات:</h3>
-        كافة البيانات التي تقوم بإدخالها تُخزن محلياً على جهازك فقط. في حال تفعيل ميزة المزامنة، يتم استخدام خدمة iCloud التابعة لشركة Apple لنقل البيانات بين أجهزتك الخاصة بشكل مشفر بالكامل، ولا يمكننا الوصول إلى هذه البيانات.
-        <h3>2. الصلاحيات المطلوبة:</h3>
-        • <b>الإشعارات:</b> لإرسال تنبيهات المهام، نوبات العمل، وتذكيرات البصمة.<br>
-        • <b>التقويم والتذكيرات:</b> للوصول إلى المهام الموجودة في نظامك أو إضافة مهام جديدة لسهولة التكامل.<br>
-        • <b>الصور:</b> نطلب صلاحية "إضافة الصور فقط" لنتمكن من حفظ نسخ من جداولك داخل ألبوم الكاميرا بناءً على طلبك.
-        <h3>3. خدمات الطرف الثالث:</h3>
-        لا يحتوي التطبيق على أدوات تحليل طرف ثالث (Analytics) أو شبكات إعلانية تقوم بتتبع نشاطك. التطبيق نظيف تماماً من أي أدوات تتبع.
-        <h3>4. التواصل:</h3>
-        لأي استفسارات بخصوص الخصوصية، يمكنك التواصل معنا مباشرة عبر البريد الإلكتروني:<br>
-        <b>mohammad087087@gmail.com</b><br>
-        <b>المنطقة:</b> المملكة العربية السعودية
+    <!-- English -->
+    <div class="lang-block" id="lang-en">
+        <div class="section-title">Privacy Policy</div>
+        <div class="updated">Last updated: March 2026</div>
+        <div class="content">
+            Meead ("the App") is developed by Mohammad Al-Qarni ("the Developer", "we", "us"). We respect your privacy and are committed to protecting it. This policy explains how we handle your data.
+
+            <h3>Data We Collect</h3>
+            <b>We do not collect any personal data.</b> We do not require you to create an account, sign in, or provide any identifying information such as your name, email address, or phone number.
+
+            <h3>Data Stored on Your Device</h3>
+            All your data is stored locally on your device only, including:
+            <ul>
+                <li>Tasks and notes</li>
+                <li>Shift schedules and types</li>
+                <li>Overtime, late arrivals, permissions, and absence records</li>
+                <li>Leaves and leave types</li>
+                <li>App settings and preferences</li>
+            </ul>
+            This data is never sent to any external server and we cannot access it.
+
+            <h3>iCloud Sync (Optional)</h3>
+            If you enable iCloud sync (an optional premium feature), your data is transferred via Apple's iCloud Key-Value Storage to sync across your Apple devices only. This data:
+            <ul>
+                <li>Is subject to Apple's Privacy Policy</li>
+                <li>Is encrypted in transit and at rest by Apple</li>
+                <li>Is not accessed or controlled by us</li>
+                <li>Can be disabled at any time from the App settings</li>
+            </ul>
+
+            <h3>Subscriptions and Payments</h3>
+            All purchases and subscriptions are processed exclusively through Apple's system (StoreKit). We:
+            <ul>
+                <li>Do not collect or store any financial information or payment card data</li>
+                <li>Do not process payments directly — Apple is solely responsible</li>
+                <li>Subscriptions auto-renew unless cancelled before the end of the current period</li>
+                <li>You can manage and cancel subscriptions from your Apple account settings</li>
+            </ul>
+
+            <h3>Notifications</h3>
+            The App uses local notifications only (scheduled on your device) to remind you of shifts and tasks. These notifications:
+            <ul>
+                <li>Do not pass through any external server</li>
+                <li>Require your prior permission</li>
+                <li>Can be controlled or disabled from App settings or device settings</li>
+            </ul>
+
+            <h3>Third-Party Services</h3>
+            <b>We do not use any third-party services.</b> The App contains no:
+            <ul>
+                <li>Analytics or tracking tools</li>
+                <li>Advertisements</li>
+                <li>External data collection libraries</li>
+                <li>Crash reporting tools that send data to third parties</li>
+            </ul>
+
+            <h3>Data Security</h3>
+            Your data is protected by iOS security mechanisms including device encryption and app sandboxing. We do not control the security of data stored on iCloud, which is subject to Apple's security policies.
+
+            <h3>Children's Privacy</h3>
+            The App is not intended for children under the age of 13 and we do not knowingly collect any data from children.
+
+            <h3>Changes to This Policy</h3>
+            We may update this policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically.
+
+            <h3>Contact Us</h3>
+            For any questions about this policy, contact us via the App's page on the App Store or the developer's account on X (Twitter).
+        </div>
     </div>
 
-    <div class="dev-info">
-        <img src="avatar.jpg" class="avatar" alt="M. Al-Qarni">
-        <div class="label" style="font-size: 12px; color: var(--sec);">المطور : Developer</div>
-        <div class="dev-name">م. محمد القرني<br><small>Eng. Mohammad Al-Qarni</small></div>
-        <a href="https://x.com/eng_m37?s=21" class="x-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
+    <!-- French -->
+    <div class="lang-block" id="lang-fr">
+        <div class="section-title">Politique de Confidentialité</div>
+        <div class="updated">Dernière mise à jour : mars 2026</div>
+        <div class="content">
+            Meead (« l'Application ») est développée par Mohammad Al-Qarni (« le Développeur », « nous »). Nous respectons votre vie privée et nous nous engageons à la protéger. Cette politique explique comment nous traitons vos données.
+
+            <h3>Données que nous collectons</h3>
+            <b>Nous ne collectons aucune donnée personnelle.</b> Nous ne vous demandons pas de créer un compte, de vous connecter ou de fournir des informations d'identification telles que votre nom, votre adresse e-mail ou votre numéro de téléphone.
+
+            <h3>Données stockées sur votre appareil</h3>
+            Toutes vos données sont stockées localement sur votre appareil uniquement, notamment :
+            <ul>
+                <li>Tâches et notes</li>
+                <li>Horaires de travail et types de postes</li>
+                <li>Heures supplémentaires, retards, autorisations et absences</li>
+                <li>Congés et types de congés</li>
+                <li>Paramètres et préférences de l'application</li>
+            </ul>
+            Ces données ne sont jamais envoyées à un serveur externe et nous ne pouvons pas y accéder.
+
+            <h3>Synchronisation iCloud (facultative)</h3>
+            Si vous activez la synchronisation iCloud (fonction premium facultative), vos données sont transférées via le stockage clé-valeur iCloud d'Apple pour les synchroniser entre vos appareils Apple uniquement. Ces données :
+            <ul>
+                <li>Sont soumises à la politique de confidentialité d'Apple</li>
+                <li>Sont chiffrées en transit et au repos par Apple</li>
+                <li>Ne sont ni consultées ni contrôlées par nous</li>
+                <li>Peuvent être désactivées à tout moment depuis les paramètres de l'application</li>
+            </ul>
+
+            <h3>Abonnements et paiements</h3>
+            Tous les achats et abonnements sont traités exclusivement via le système Apple (StoreKit). Nous :
+            <ul>
+                <li>Ne collectons ni ne stockons aucune information financière</li>
+                <li>Ne traitons pas les paiements directement — Apple en est seul responsable</li>
+                <li>Les abonnements se renouvellent automatiquement sauf annulation avant la fin de la période en cours</li>
+                <li>Vous pouvez gérer et annuler vos abonnements depuis les paramètres de votre compte Apple</li>
+            </ul>
+
+            <h3>Notifications</h3>
+            L'application utilise uniquement des notifications locales (programmées sur votre appareil). Elles ne passent par aucun serveur externe et nécessitent votre autorisation préalable.
+
+            <h3>Services tiers</h3>
+            <b>Nous n'utilisons aucun service tiers.</b> L'application ne contient aucun outil d'analyse, aucune publicité, aucune bibliothèque de collecte de données et aucun outil de rapport d'erreurs tiers.
+
+            <h3>Confidentialité des enfants</h3>
+            L'application n'est pas destinée aux enfants de moins de 13 ans et nous ne collectons sciemment aucune donnée les concernant.
+
+            <h3>Modifications de cette politique</h3>
+            Nous pouvons mettre à jour cette politique de temps en temps. Les modifications seront publiées sur cette page avec une date de mise à jour.
+
+            <h3>Contact</h3>
+            Pour toute question, contactez-nous via la page de l'application sur l'App Store ou le compte du développeur sur X (Twitter).
+        </div>
+    </div>
+
+    <!-- Turkish -->
+    <div class="lang-block" id="lang-tr">
+        <div class="section-title">Gizlilik Politikası</div>
+        <div class="updated">Son güncelleme: Mart 2026</div>
+        <div class="content">
+            Meead ("Uygulama"), Mohammad Al-Qarni ("Geliştirici", "biz") tarafından geliştirilmiştir. Gizliliğinize saygı duyuyor ve korumayı taahhüt ediyoruz. Bu politika, verilerinizi nasıl işlediğimizi açıklar.
+
+            <h3>Topladığımız Veriler</h3>
+            <b>Hiçbir kişisel veri toplamıyoruz.</b> Hesap oluşturmanızı, giriş yapmanızı veya ad, e-posta, telefon numarası gibi kimlik bilgilerinizi vermenizi istemiyoruz.
+
+            <h3>Cihazınızda Saklanan Veriler</h3>
+            Tüm verileriniz yalnızca cihazınızda yerel olarak saklanır:
+            <ul>
+                <li>Görevler ve notlar</li>
+                <li>Vardiya programları ve türleri</li>
+                <li>Fazla mesai, geç kalma, izin ve devamsızlık kayıtları</li>
+                <li>İzinler ve izin türleri</li>
+                <li>Uygulama ayarları ve tercihleriniz</li>
+            </ul>
+            Bu veriler hiçbir harici sunucuya gönderilmez ve bizim tarafımızdan erişilemez.
+
+            <h3>iCloud Senkronizasyonu (İsteğe Bağlı)</h3>
+            iCloud senkronizasyonunu etkinleştirirseniz (isteğe bağlı premium özellik), verileriniz yalnızca Apple cihazlarınız arasında senkronize edilmek üzere Apple'ın iCloud hizmeti aracılığıyla aktarılır. Bu veriler Apple'ın gizlilik politikasına tabidir ve tarafımızdan erişilemez.
+
+            <h3>Abonelikler ve Ödemeler</h3>
+            Tüm satın almalar yalnızca Apple'ın sistemi (StoreKit) üzerinden işlenir. Herhangi bir finansal bilgi toplamıyor veya saklamıyoruz. Abonelikler, mevcut dönem bitmeden iptal edilmediği sürece otomatik olarak yenilenir.
+
+            <h3>Bildirimler</h3>
+            Uygulama yalnızca yerel bildirimler kullanır (cihazınızda planlanır). Harici bir sunucu üzerinden geçmez ve önceden izninizi gerektirir.
+
+            <h3>Üçüncü Taraf Hizmetleri</h3>
+            <b>Hiçbir üçüncü taraf hizmeti kullanmıyoruz.</b> Uygulamada analitik, reklam, veri toplama kütüphanesi veya üçüncü taraf çökme raporlama aracı bulunmamaktadır.
+
+            <h3>Çocukların Gizliliği</h3>
+            Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamıyoruz.
+
+            <h3>Bu Politikadaki Değişiklikler</h3>
+            Bu politikayı zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada güncellenmiş tarih ile yayınlanacaktır.
+
+            <h3>İletişim</h3>
+            Sorularınız için App Store'daki uygulama sayfası veya geliştiricinin X (Twitter) hesabı üzerinden bizimle iletişime geçebilirsiniz.
+        </div>
+    </div>
+
+    <!-- German -->
+    <div class="lang-block" id="lang-de">
+        <div class="section-title">Datenschutzrichtlinie</div>
+        <div class="updated">Letzte Aktualisierung: März 2026</div>
+        <div class="content">
+            Meead („die App") wird von Mohammad Al-Qarni („der Entwickler", „wir") entwickelt. Wir respektieren Ihre Privatsphäre und verpflichten uns, diese zu schützen. Diese Richtlinie erklärt, wie wir mit Ihren Daten umgehen.
+
+            <h3>Daten, die wir erheben</h3>
+            <b>Wir erheben keine personenbezogenen Daten.</b> Wir verlangen weder die Erstellung eines Kontos noch eine Anmeldung oder die Angabe von Identifikationsinformationen wie Name, E-Mail-Adresse oder Telefonnummer.
+
+            <h3>Auf Ihrem Gerät gespeicherte Daten</h3>
+            Alle Ihre Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert:
+            <ul>
+                <li>Aufgaben und Notizen</li>
+                <li>Schichtpläne und -typen</li>
+                <li>Überstunden, Verspätungen, Genehmigungen und Abwesenheiten</li>
+                <li>Urlaub und Urlaubsarten</li>
+                <li>App-Einstellungen und Präferenzen</li>
+            </ul>
+            Diese Daten werden niemals an einen externen Server gesendet und sind für uns nicht zugänglich.
+
+            <h3>iCloud-Synchronisierung (Optional)</h3>
+            Wenn Sie die iCloud-Synchronisierung aktivieren (optionale Premium-Funktion), werden Ihre Daten über Apples iCloud Key-Value Storage nur zwischen Ihren Apple-Geräten synchronisiert. Diese Daten unterliegen Apples Datenschutzrichtlinie und sind für uns nicht zugänglich.
+
+            <h3>Abonnements und Zahlungen</h3>
+            Alle Käufe und Abonnements werden ausschließlich über Apples System (StoreKit) abgewickelt. Wir erheben oder speichern keine Finanzinformationen. Abonnements verlängern sich automatisch, sofern sie nicht vor Ende des aktuellen Zeitraums gekündigt werden.
+
+            <h3>Benachrichtigungen</h3>
+            Die App verwendet ausschließlich lokale Benachrichtigungen (auf Ihrem Gerät geplant). Sie laufen über keinen externen Server und erfordern Ihre vorherige Zustimmung.
+
+            <h3>Drittanbieterdienste</h3>
+            <b>Wir verwenden keine Drittanbieterdienste.</b> Die App enthält keine Analyse-Tools, keine Werbung, keine externen Datenerfassungsbibliotheken und keine Absturzberichterstattung an Dritte.
+
+            <h3>Datenschutz für Kinder</h3>
+            Die App ist nicht für Kinder unter 13 Jahren bestimmt, und wir erheben wissentlich keine Daten von Kindern.
+
+            <h3>Änderungen dieser Richtlinie</h3>
+            Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit aktualisiertem Datum veröffentlicht.
+
+            <h3>Kontakt</h3>
+            Bei Fragen kontaktieren Sie uns über die App-Seite im App Store oder das X-Konto (Twitter) des Entwicklers.
+        </div>
+    </div>
+
+    <div class="footer">
         <div class="copyright">جميع الحقوق محفوظة مِيعاد © 2026<br>All Rights Reserved - Meead</div>
     </div>
 </div>
+
+<script>
+    const rtlLangs = ['ar'];
+    function setLang(lang) {
+        document.querySelectorAll('.lang-block').forEach(b => b.classList.remove('active'));
+        const block = document.getElementById('lang-' + lang);
+        if (block) block.classList.add('active');
+        document.documentElement.dir = rtlLangs.includes(lang) ? 'rtl' : 'ltr';
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.onclick.toString().includes("'" + lang + "'")) btn.classList.add('active');
+        });
+        try { localStorage.setItem('meead_lang', lang); } catch(e) {}
+    }
+    function detectLang() {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get('lang');
+        if (urlLang && document.getElementById('lang-' + urlLang)) return urlLang;
+        try { const saved = localStorage.getItem('meead_lang'); if (saved && document.getElementById('lang-' + saved)) return saved; } catch(e) {}
+        const bl = (navigator.language || '').substring(0, 2);
+        if (document.getElementById('lang-' + bl)) return bl;
+        return 'ar';
+    }
+    setLang(detectLang());
+</script>
 </body>
 </html>
